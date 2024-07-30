@@ -34,3 +34,20 @@ func TestShred(t *testing.T) {
 		t.Errorf("File was not deleted")
 	}
 }
+
+// Negative test - try to Shred a non existing file
+func TestShredNonExistentFile(t *testing.T) {
+	// Path to a non-existent file
+	nonExistentFilePath := "non_existent_file.txt"
+
+	// Ensure the file does not exist
+	if _, err := os.Stat(nonExistentFilePath); !os.IsNotExist(err) {
+		t.Fatalf("File %s unexpectedly exists", nonExistentFilePath)
+	}
+
+	// Call the Shred function
+	err := Shred(nonExistentFilePath)
+	if err == nil {
+		t.Errorf("Expected error when shredding non-existent file, but got nil")
+	}
+}
