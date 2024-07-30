@@ -51,3 +51,10 @@ func TestShredNonExistentFile(t *testing.T) {
 		t.Errorf("Expected error when shredding non-existent file, but got nil")
 	}
 }
+
+// Test to cover the case that fileInfo, err := file.Stat() failed. But no clue until yet how to do so
+// Test to mock the rand.read() and return an error
+// Test to mock file.WriteAt() and return an error
+// Test to mock file.Sync() and return an error
+// Test to mock file.Close() and return an error
+// Test to mock os.Remove() and return an error
