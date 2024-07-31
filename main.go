@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	// Check for correct arguments.
+	// Check for correct arguments
 	if len(os.Args) != 2 {
 		fmt.Printf("Usage: %s <file_path>\n", os.Args[0])
 		os.Exit(1)
