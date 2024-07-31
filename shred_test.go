@@ -52,7 +52,7 @@ func TestShredNonExistentFile(t *testing.T) {
 	}
 }
 
-// Test to moch file.Stat() and return an error
+// Test to mock file.Stat() and return an error
 // Test to mock rand.read() and return an error
 // Test to mock file.WriteAt() and return an error
 // Test to mock file.Sync() and return an error
